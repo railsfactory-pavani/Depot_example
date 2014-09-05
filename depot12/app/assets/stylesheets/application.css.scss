@@ -1,0 +1,126 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#banner {
+  background: #FFCCFF;
+  padding: 30px;
+  border-bottom: 2px solid;
+  font-style: small-caps 80px/80px "Times New Roman", serif;
+  color: #663333;
+  text-align: center;
+
+  img {
+    float: left;
+   }
+ }
+
+#notice {
+  color: #000 !important;
+  border: 2px solid black;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #FF99CC;
+  font-style: bold smaller sans-serif;
+}
+
+#columns {
+  background: #9999FF;
+
+  #main {
+    margin-left: 17em;
+    padding: 6em;
+    background: #CC99FF;
+  }
+
+  #side {
+   float: left;
+   padding: 1em 2em;
+   width: 13em;
+   background: #9999FF;
+
+   form, div {
+    display: inline;
+   }
+
+   input {
+    font-size: small;
+   }
+
+   #cart {
+     font-size: smaller;
+     color: #663333;
+
+     table {
+       border-top: 3px dotted #9966FF;
+       border-bottom: 3px dotted #9966FF;
+       margin-bottom: 10px;
+     }
+   }
+
+   ul {
+     padding: 0;
+
+     li {
+       list-style: none;
+
+       a {
+          color: #3333CC;
+          font-size: small;
+        }
+      }
+    }
+  }
+}
+ 
+.depot_form {
+   fieldset {
+     background: #6666FF;
+     legend {
+       color: #700000;
+       background: #C0C0C0;
+       font-family: sans-serif;
+       padding: 0.2em 1em;
+    }
+  }
+
+  form {
+    label {
+     width: 5em;
+     float: left;
+     text-align: right;
+     padding-top: 0.2em;
+     margin-right: 0.1em;
+     display: block;
+    }
+
+    select, textarea, input {
+     margin-left: 0.5em;
+    }
+
+   .submit {
+     margin-left: 4em;
+    }
+
+    br {
+     display: none
+    }
+  }
+}
+.locale {
+  float: right;
+  margin: -0.25em 0.1em;
+}
+

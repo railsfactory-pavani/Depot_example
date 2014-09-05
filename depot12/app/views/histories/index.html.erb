@@ -1,0 +1,25 @@
+<h1>Order History</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Product</th>
+      <th>Date</th>
+      <th>Amount</th>
+      
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+       <% @histories.each do |item| %>
+      <tr>
+        <td><%= item.quantity %>&times;</td>
+        <td><%= item.product.title %></td>
+        <td><%= item.created_at %></td>
+        <td><%= item.product.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
