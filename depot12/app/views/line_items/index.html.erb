@@ -20,9 +20,7 @@
         <td><%= item.product.title %></td>
         <td><%= number_to_currency(item.total_price)%></td>
         <% @arr << item.total_price %>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_line_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Remove', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
    <% $sum = @arr.sum %>

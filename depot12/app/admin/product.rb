@@ -15,20 +15,40 @@ ActiveAdmin.register Product do
   #   permitted
   # end
 
-  index do
+   show do |product|
+      attributes_table do
+        row :title
+        row :description
+        row :image do
+          image_tag(product.image.url)
+        end
+        row :price
+      end
+    end
+
+  index do |product|
     selectable_column
     id_column
     column :title
     column :description
-    column :image
-    column :price
+    column :image do |img|
+      div :class => "image_size" do
+       image_tag(img.image)
+      end
+    end
+    column :price do |product|
+      div :class => "price" do
+       number_to_currency(product.price)
+      end
+    end
     actions
   end
+
   form :html => { :enctype => "multipart/form-data" } do |f| 
     f.inputs "Product", :multipart => true do 
       f.input :title 
       f.input :description 
-      f.input :image
+      f.input :image 
       f.input :price 
    end 
     f.actions
